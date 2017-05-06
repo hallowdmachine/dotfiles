@@ -12,12 +12,17 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
+Plugin 'ap/vim-buftabline'
 
 " /plugins ------------------------
 
 call vundle#end()
 
 filetype plugin indent on
+
+" buffer setup --------------------
+set hidden
+" /buffer setup -------------------
 
 syntax on
 set t_Co=256
@@ -30,6 +35,7 @@ set shiftwidth=2
 set expandtab
 
 " netrw config --------------------
+" https://shapeshed.com/vim-netrw/
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
@@ -44,6 +50,7 @@ let g:netrw_winsize = 25
 " /netrw config -------------------
 
 " statusline config ---------------
+" http://stackoverflow.com/a/9121083
 " always display status line
 set laststatus=2
 
