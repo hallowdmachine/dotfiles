@@ -1,0 +1,29 @@
+snippet hapir
+server.route({
+	method: '$1',
+	path: '$2',
+	handler: (request, reply) => {
+		return reply($3)
+	}
+})
+endsnippet
+
+snippet req
+require('$1')
+endsnippet
+
+snippet use
+'use strict';
+endsnippet
+
+snippet hapiexp
+exports.register = (server, options, next) => {
+	$1
+	return next()
+}
+
+exports.register.attributes = {
+	name: '$2'
+}
+$0
+endsnippet

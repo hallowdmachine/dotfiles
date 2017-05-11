@@ -14,6 +14,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'ap/vim-buftabline'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " /plugins ------------------------
 
@@ -42,12 +44,6 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
-
-" Open netrw on startup
-" augroup ProjectDrawer
-"  autocmd!
-"  autocmd VimEnter * :Vexplore
-"augroup END
 " /netrw config -------------------
 
 " statusline config ---------------
@@ -85,6 +81,14 @@ set statusline+=Line:%l/%L[%p%%]                " line X of Y [% of file]
 set statusline+=\ Col:%c                        " current column
 set statusline+=\ Buf:%n                        " buffer number
 " /statusline config --------------
+
+" ultisnips config ----------------
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<c-tab>"
+" /ultisnips config ---------------
 
 " keymappings ---------------------
 " Save on double escape
