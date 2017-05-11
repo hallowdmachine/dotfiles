@@ -13,6 +13,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ervandew/supertab'
 Plugin 'ap/vim-buftabline'
+Plugin 'Chiel92/vim-autoformat'
 
 " /plugins ------------------------
 
@@ -88,5 +89,6 @@ set statusline+=\ Buf:%n                        " buffer number
 " keymappings ---------------------
 " Save on double escape
 map <Esc><Esc> :w<CR>
-
+noremap <F3> :Autoformat<CR>
 " /keymappings --------------------
+
