@@ -104,3 +104,22 @@ noremap <C-N> :bn<CR>
 noremap <C-P> :bp<CR>
 " /keymappings --------------------
 
+" relative line numbers -----------
+set rnu
+set nu!
+
+function! ToggleNumRel()
+  if(&nu == 1)
+    set rnu
+    set nu!
+  else
+    set nu
+    set rnu!
+  endif
+endfunc
+
+command! ToggleNumRel
+  \ call ToggleNumRel()
+
+noremap <F2> :ToggleNumRel<CR>
+" /relative line numbers ----------
