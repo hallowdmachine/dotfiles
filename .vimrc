@@ -16,6 +16,7 @@ Plugin 'ap/vim-buftabline'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'itmammoth/doorboy.vim'
 
 " /plugins ------------------------
 
@@ -25,6 +26,11 @@ filetype plugin indent on
 
 " buffer setup --------------------
 set hidden
+" show buffer numbers
+let g:buftabline_numbers = 1
+" show modified indicator
+let g:buftabline_indicators = 1
+let g:buftabline_separators = 1
 " /buffer setup -------------------
 
 syntax on
@@ -94,5 +100,7 @@ let g:UltiSnipsListSnippets="<c-tab>"
 " Save on double escape
 map <Esc><Esc> :w<CR>
 noremap <F3> :Autoformat<CR>
+noremap <C-N> :bn<CR>
+noremap <C-P> :bp<CR>
 " /keymappings --------------------
 
